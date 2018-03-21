@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:title="@string/principal"
+        android:id="@+id/principalid">
+    </item>
+
+    <item
+        android:title="@string/csesion"
+        android:id="@+id/csesion2id">
+    </item>
+
+</menu>

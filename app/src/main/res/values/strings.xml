@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Conoce la UdeA</string>
+    <string name="ingresar">Ingresar</string>
+    <string name="registrarse">Registrarse</string>
+    <string name="Registro">Registro</string>
+    <string name="registro">Registro</string>
+    <string name="correo">Correo electronico :</string>
+    <string name="contraseña">Contraseña :</string>
+    <string name="rcontraseña">Repita su contraseña :</string>
+    <string name="Guardar">Guardar</string>
+    <string name="perfil">Mi perfil</string>
+    <string name="csesion">Cerrar sesion</string>
+    <string name="principal">Principal</string>
+    <string name="infocorreo">Usuario :  </string>
+    <string name="infocontraseña">Su contraseña es :</string>
+    <string name="bienvenido">BIENVENIDO!!</string>
+</resources>
