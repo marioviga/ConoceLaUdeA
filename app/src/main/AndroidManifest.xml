@@ -3,6 +3,7 @@
     package="com.example.samirvega.practica2actividades">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -13,6 +14,9 @@
         android:theme="@style/AppTheme">
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="com.google.sdk.ApplicationId"
             android:value="@string/facebook_app_id" />
 
         <activity android:name=".SplashActivity">
@@ -30,7 +34,7 @@
         <activity
             android:name=".modelos.udeaActivity"
             android:label="@string/title_activity_udea"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

@@ -60,9 +60,9 @@ public class adapterudea extends RecyclerView.Adapter<adapterudea.udeaViewHolder
         }
 
         public void bindUdea(udeaActivity udeaActivity, Activity activity) {
-            tnombre.setText(udeaActivity.getNombre());
-            tvalor.setText(udeaActivity.getValor());
-            Picasso.get().load(udeaActivity.getFoto()).into(iFoto);
+            //tnombre.setText(udeaActivity.getNombre());
+            //tvalor.setText(udeaActivity.getValor());
+            //Picasso.get().load(udeaActivity.getFoto()).into(iFoto);
 
         }
     }

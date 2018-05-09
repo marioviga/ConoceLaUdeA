@@ -18,6 +18,9 @@ import com.google.firebase.auth.FirebaseUser;
 public class register_activity extends AppCompatActivity {
 
     EditText correo,contraseña,rcontraseña;
+    String email,password,rpassword;
+    int k=0;
+    char c;
 
     private FirebaseAuth firebaseAuth;
     private FirebaseAuth.AuthStateListener authStateListener;
@@ -52,10 +55,26 @@ public class register_activity extends AppCompatActivity {
     }
     public void guardar(View view) {
 
-        if (correo.getText().toString().equals("") || contraseña.getText().toString().equals("") || rcontraseña.getText().toString().equals("")) { //verifico que no hayan campos vacios
+        email = correo.getText().toString();
+        password = contraseña.getText().toString();
+        rpassword = rcontraseña.getText().toString();
+
+        for(int i=0;i<password.length();i++){
+
+            c = password.charAt(i);
+
+            if (c==' ') {
+                k=1;
+                break;
+            }
+        }
+
+        if (email.equals("") || password.equals("") || rpassword.equals("")) { //verifico que no hayan campos vacios
             Toast.makeText(this, "Faltan Datos", Toast.LENGTH_SHORT).show();
+        }else if(k==1){
+            Toast.makeText(this, "Contraseña invalida", Toast.LENGTH_SHORT).show();
         }else {
-            if(contraseña.getText().toString().equals(rcontraseña.getText().toString())) {
+            if(password.equals(rpassword)) {
                 Intent regeresomain = new Intent();
                 regeresomain.putExtra("email", correo.getText().toString());          //esta parte es para devolverme al MainActivity y enviarle el correo y la contraseña
                 regeresomain.putExtra("password", contraseña.getText().toString());

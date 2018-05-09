@@ -54,6 +54,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
     EditText correo,contraseña;
     String scorreo="",scontraseña="";
     boolean cr,cn;
+    int a;
 
 
 
@@ -110,11 +111,11 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
 
-                            Toast.makeText(MainActivity.this, "Cuenta creada",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(MainActivity.this, "Exitoso",Toast.LENGTH_SHORT).show();
                             cr = true;
                             cn = true;
                             Log.d("FirebaseUser","true");
-                            goprincipal();
+                            goprincipal(3);
 
                         }else{
                             Toast.makeText(MainActivity.this, "Error al crear"+task.getException(),Toast.LENGTH_SHORT).show();
@@ -123,11 +124,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
                 });
     }
 
-  /*  @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        callbackManager.onActivityResult(requestCode,resultCode,data);
-    }*/
 
     private void getHashes() {
         try {
@@ -182,6 +178,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
     @Override
     protected void onStart() {
         super.onStart();
+        firebaseAuth.addAuthStateListener(authStateListener);
     }
 
     @Override
@@ -197,6 +194,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
     @Override
     protected void onStop() {
         super.onStop();
+        firebaseAuth.removeAuthStateListener(authStateListener);
     }
 
     @Override
@@ -213,7 +211,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
           //aqui confirmamos que esta respuesta si sea de register_activity ( mire la linea 78)
         if(requestCode==123 && resultCode==RESULT_OK){
-
 
             if(data.getExtras()!=null) {
                 scorreo = data.getExtras().getString("email");  //obtenemos los datos de la respuesta de register
@@ -238,7 +235,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
                     new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
-                            goprincipal();
+                            goprincipal(2);
                         }
                     });
         }
@@ -267,7 +264,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
                         cr = true;
                         cn = true;
                         Log.d("FirebaseUser","true");
-                        goprincipal();
+                        goprincipal(1);
 
                     }else{
                         Toast.makeText(MainActivity.this, "Error al crear"+task.getException(),Toast.LENGTH_SHORT).show();
@@ -276,21 +273,16 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
 
             });
 
-            /*if (correo.getText().toString().equals(scorreo)) {
-                cr = true;                                      //verifico que los datos si correspondan
-                if (contraseña.getText().toString().equals(scontraseña)) {
-                    cn = true;
-                } else Toast.makeText(this, "Usuario o contraseña incorrectos", Toast.LENGTH_SHORT).show();
-            } else Toast.makeText(this, "Usuario o contraseña incorrectos", Toast.LENGTH_SHORT).show();*/
         }
     }
 
-    public void goprincipal(){
+    public void goprincipal(int a){
 
             Log.d("FirebaseUser", "xxxxxxxxxxxxxxxxx ");
             Intent ingreso = new Intent(this, Actividad_principal.class);   // si los datos estan correctos paso a Actividad_principal
-            //ingreso.putExtra("usuario",scorreo);
-            //ingreso.putExtra("contraseña",scontraseña);     //envio los valores de usuario y contraseña a la clase Actividad_principal
+            ingreso.putExtra("inicio_con",a);
+            correo.setText("");
+            contraseña.setText("");
             startActivity(ingreso);
     }
 
