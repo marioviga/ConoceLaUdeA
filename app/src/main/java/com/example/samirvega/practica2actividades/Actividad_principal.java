@@ -20,7 +20,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class Actividad_principal extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener{
-
+    //PRUEBA
     String correo="",contraseña;
     private FirebaseAuth firebaseAuth;
     private FirebaseAuth.AuthStateListener authStateListener;

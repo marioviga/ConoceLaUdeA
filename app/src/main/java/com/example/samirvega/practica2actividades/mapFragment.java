@@ -23,6 +23,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
  * A simple {@link Fragment} subclass.
  */
 public class mapFragment extends Fragment implements OnMapReadyCallback {
+    //PRUEBA
     private GoogleMap mMap;
     private MapView mapView;
 

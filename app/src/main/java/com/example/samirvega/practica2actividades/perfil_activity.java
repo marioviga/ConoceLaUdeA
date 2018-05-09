@@ -23,7 +23,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.squareup.picasso.Picasso;
 
 public class perfil_activity extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener{
-
+    //PRUEBA
     String correo, contraseña;
     TextView email,password;
     int a;
