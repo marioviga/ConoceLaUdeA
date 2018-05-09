@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "47277977876",
+    "firebase_url": "https://practica2-master-master.firebaseio.com",
+    "project_id": "practica2-master-master",
+    "storage_bucket": "practica2-master-master.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:47277977876:android:fff993946855d2b3",
+        "android_client_info": {
+          "package_name": "com.example.samirvega.practica2actividades"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "47277977876-gnlai8m51kqte3iktf9668u7l7hi74r5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.samirvega.practica2actividades",
+            "certificate_hash": "4a06503620b5f7d81cbd5ea4fa216b43333ca47e"
+          }
+        },
+        {
+          "client_id": "47277977876-n4d5n5vco6pi4pr1q7pu9km6u22qpcgi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvzVHLc2okFcRz9rdlim888fMZkF_hW7A"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "47277977876-n4d5n5vco6pi4pr1q7pu9km6u22qpcgi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
