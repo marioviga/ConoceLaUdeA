@@ -6,72 +6,75 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.samirvega.practica2actividades.MainActivity"
-    android:orientation="vertical">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0">
+    android:orientation="vertical"
+    android:background="@drawable/fuente1">
+
         <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/signs"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        android:background="@color/white">
+            android:layout_marginTop="70sp"
+            android:layout_width="200sp"
+            android:layout_height="200sp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/fuente2"
+            android:layout_marginBottom="70dp"/>
         <EditText
             android:id="@+id/eUsuario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
             android:hint="Usuario"
             android:gravity="center"
-            android:layout_marginTop="20dp"
-            android:inputType="textEmailAddress"/>
+            android:inputType="textNoSuggestions"
+            />
         <EditText
             android:id="@+id/econtraseña"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
             android:hint="Contraseña"
             android:gravity="center"
             android:layout_marginTop="20dp"
-            android:inputType="textWebPassword"/>
+            android:inputType="textWebPassword" />
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             android:text="@string/ingresar"
-            android:background="@color/colorAccent"
+            android:background="@color/green"
             android:onClick="Ingresar"
-            android:textColor="@color/white"/>
+            android:textColor="@color/white"
+            android:textSize="20dp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/registrarse"
             android:layout_gravity="center"
             android:layout_marginTop="15dp"
-            android:onClick="registrarse"/>
-
-        <com.facebook.login.widget.LoginButton
-            android:id="@+id/login_button"
+            android:onClick="registrarse"
+            android:textSize="20dp"
+            android:textColor="@color/green"/>
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="30dp"
-            android:layout_marginBottom="30dp" />
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+                <com.facebook.login.widget.LoginButton
+                    android:id="@+id/login_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp" />
 
-        <com.google.android.gms.common.SignInButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="15dp"
-            android:id="@+id/btnSignInGoogle">
-        </com.google.android.gms.common.SignInButton>
+                <com.google.android.gms.common.SignInButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:id="@+id/btnSignInGoogle">
+                </com.google.android.gms.common.SignInButton>
+
+        </LinearLayout>
 
 
-    </LinearLayout>
 
 </LinearLayout>

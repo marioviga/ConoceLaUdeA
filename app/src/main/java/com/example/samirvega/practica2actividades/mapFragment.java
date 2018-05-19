@@ -23,7 +23,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
  * A simple {@link Fragment} subclass.
  */
 public class mapFragment extends Fragment implements OnMapReadyCallback {
-    //PRUEBA
+
     private GoogleMap mMap;
     private MapView mapView;
 
@@ -58,9 +58,10 @@ public class mapFragment extends Fragment implements OnMapReadyCallback {
             return;
         }
         mMap.setMyLocationEnabled(true);
-// Add a marker in Sydney and move the camera
+        // Add a marker in Sydney and move the camera
         LatLng sydney = new LatLng(-34, 151);
         mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
+
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
 
         LatLng udea = new LatLng(6.2669533,-75.5713054);

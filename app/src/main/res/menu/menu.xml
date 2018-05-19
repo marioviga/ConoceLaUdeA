@@ -10,4 +10,9 @@
         android:title="@string/csesion"
         android:id="@+id/csesionid">
     </item>
+
+    <item
+        android:title="@string/mapa"
+        android:id="@+id/mapaid">
+    </item>
 </menu>

@@ -1,5 +1,6 @@
 package com.example.samirvega.practica2actividades;
 
+import android.app.Fragment;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -19,8 +20,8 @@ import com.google.android.gms.common.api.Status;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class Actividad_principal extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener{
-    //PRUEBA
+public class Actividad_principal extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener {
+    //PRUEBA 1
     String correo="",contraseña;
     private FirebaseAuth firebaseAuth;
     private FirebaseAuth.AuthStateListener authStateListener;
@@ -90,7 +91,7 @@ public class Actividad_principal extends AppCompatActivity implements GoogleApiC
             intent.putExtra("inicio_con",a);
             startActivityForResult(intent,1234);    //espero respuesta de activity_perfil para saber si cierro sesion o me devuelvo a esta misma actividad
 
-        }else if(id == R.id.csesionid){
+        }else if(id == R.id.csesionid) {
             switch (a) {
                 case 1:
                     firebaseAuth.signOut();
